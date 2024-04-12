@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Perfil</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Estilos de CSS en línea */
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        background-image: url("C:/proyectoslucas/perfillucas/fotos/1.jpg"); /* Cambia '1.jpg' por el nombre de tu primera imagen de fondo */
+        background-size: cover;
+        background-position: center;
+        animation: changeBackground 12s infinite; /* Aumentamos la duración de la animación */
+      }
+
+      @keyframes changeBackground {
+        0% {
+          background-image: url("C:/proyectoslucas/perfillucas/fotos/4.jpg"); /* Cambiamos el orden de las imágenes para empezar con la última */
+        }
+        25% {
+          background-image: url("C:/proyectoslucas/perfillucas/fotos/11.jpg");
+        }
+        50% {
+          background-image: url("C:/proyectoslucas/perfillucas/fotos/12.jpg");
+        }
+        75% {
+          background-image: url("C:/proyectoslucas/perfillucas/fotos/13.jpg");
+        }
+        100% {
+          background-image: url("C:/proyectoslucas/perfillucas/fotos/14.jpg");
+        }
+      }
+
+      .container {
+        position: relative;
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.8
+        ); /* Fondo semi-transparente */
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .profile-picture {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .profile-picture img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1,
+      h2 {
+        color: #333;
+      }
+
+      section {
+        margin-bottom: 30px;
+      }
+
+      p {
+        color: #666;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      li {
+        margin-bottom: 5px;
+      }
+
+      .contact p {
+        margin-bottom: 10px;
+      }
+
+      .contact p:last-child {
+        margin-bottom: 0;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 20px;
+        color: #999;
+      }
+
+      /* Estilos de CSS externos */
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+      .header-container {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      section {
+        padding: 20px;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      section:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .bio,
+      .skills,
+      .contact,
+      .education,
+      .experience,
+      .projects {
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .skills ul,
+      .projects ul {
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+      }
+
+      .skills li,
+      .projects li {
+        display: inline-block;
+      }
+
+      .projects a {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      .projects a:hover {
+        text-decoration: underline;
+      }
+
+      /* Estilos para el botón de WhatsApp */
+      .whatsapp-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+      }
+
+      .whatsapp-button img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+
+      .whatsapp-button img:hover {
+        transform: scale(1.1);
+      }
+
+      /* Estilos para los acordeones */
+      .accordion {
+        background-color: #f9f9f9;
+        color: #333;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+        border-radius: 8px;
+        margin-bottom: 15px;
+      }
+
+      .accordion:hover {
+        background-color: #ddd;
+      }
+
+      .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: white;
+        overflow: hidden;
+        border-radius: 8px;
+        transition: max-height 0.5s ease-out;
+        margin-bottom: 20px;
+      }
+
+      .panel p {
+        margin: 0;
+      }
+
+      .active,
+      .accordion:hover {
+        background-color: #ccc;
+      }
+
+      .active + .panel {
+        display: block;
+        max-height: 1000px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        /* Choose a value greater than the expected maximum height of the panel */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="profile-picture">
+        <img
+          src="C:\proyectoslucas\perfillucas\fotos\perfil.jpeg"
+          alt="Foto de perfil"
+        />
+      </div>
+      <div class="header-container">
+        <h1>Mi Perfil</h1>
+      </div>
+      <button class="accordion">Sobre Mí</button>
+      <div class="panel">
+        <p>
+          Soy Lucas Zeller, un apasionado por la programación y la tecnología.
+          Me considero un programador junior con experiencia en desarrollo web y
+          un gran interés en aprender y crecer en el campo de la informática.
+          Además de mi pasión por la programación, me interesa la inteligencia
+          artificial y el desarrollo web. Estoy constantemente buscando
+          oportunidades para expandir mis habilidades y contribuir de manera
+          significativa a proyectos desafiantes.
+        </p>
+      </div>
+      <button class="accordion">Habilidades</button>
+      <div class="panel">
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Python</li>
+          <li>React</li>
+          <li>Node.js</li>
+          <!-- Agrega más habilidades aquí -->
+        </ul>
+      </div>
+      <button class="accordion">Educación</button>
+      <div class="panel">
+        <p>Grado en Informática - Universidad X (Año de graduación)</p>
+        <!-- Agrega más información sobre tu educación -->
+      </div>
+      <button class="accordion">Experiencia Laboral</button>
+      <div class="panel">
+        <p>Desarrollador Web - Empresa Y (Fecha de inicio - Fecha de fin)</p>
+        <!-- Agrega más información sobre tu experiencia laboral -->
+      </div>
+      <button class="accordion">Proyectos Destacados</button>
+      <div class="panel">
+        <ul>
+          <li><a href="#">Proyecto 1</a> - Descripción breve del proyecto</li>
+          <li><a href="#">Proyecto 2</a> - Descripción breve del proyecto</li>
+          <!-- Agrega más proyectos destacados -->
+        </ul>
+      </div>
+      <button class="accordion">Contacto</button>
+      <div class="panel">
+        <p>
+          Puedes contactarme en:
+          <a href="mailto:Lucaszeller31@gmail.com">Lucaszeller31@gmail.com</a>
+        </p>
+        <p>Al Teléfono: 3406-415139</p>
+      </div>
+    </div>
+    <!-- Botón de WhatsApp -->
+    <div class="whatsapp-button">
+      <a href="https://wa.me/5493406415139" target="_blank">
+        <img src="C:\proyectoslucas\perfillucas\fotos\wpp.jpg" alt="WhatsApp" />
+      </a>
+    </div>
+    <footer>
+      <p>&copy; 2023 Lucas Zeller</p>
+    </footer>
+    <script>
+      var acc = document.querySelectorAll(".accordion");
+
+      acc.forEach(function (el) {
+        el.addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
