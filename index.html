@@ -14,7 +14,7 @@
         background-image: url("fotos/1.jpg");
         background-size: cover;
         background-position: center;
-        animation: changeBackground 12s infinite;
+        animation: changeBackground 30s infinite;
       }
 
       @keyframes changeBackground {
@@ -173,7 +173,7 @@
 
       .whatsapp-button {
         position: fixed;
-        bottom: 20px;
+        bottom: 60px;
         right: 20px;
         z-index: 1000;
       }
@@ -198,6 +198,20 @@
         to {
           max-height: 1000px;
           margin-top: 20px;
+        }
+      }
+
+      /* Estilos para dispositivos móviles */
+      @media screen and (max-width: 768px) {
+        .container {
+          max-width: 90%; /* Reducir el ancho máximo para pantallas pequeñas */
+          margin: 10px auto;
+          padding: 10px;
+        }
+
+        .profile-picture img {
+          width: 100px; /* Reducir el tamaño de la imagen de perfil */
+          height: 100px;
         }
       }
     </style>
@@ -247,17 +261,20 @@
       <button class="accordion">Contacto</button>
       <div class="panel">
         <p>
-          Puedes contactarme en:
-          <a href="mailto:Lucaszeller31@gmail.com">Lucaszeller31@gmail.com</a>
+          mail:
+          <a href="mailto:lucaszeller31@gmail.com">lucaszeller31@gmail.com</a>
         </p>
-        <p>+54 9 3406-415139</p>
+        <p>teléfono: <a href="tel:+5493406415139">+54 9 3406-415139</a></p>
         <p>
+          linkedin:
           <a
             href="https://www.linkedin.com/in/lucas-zeller-11125420a/"
             target="_blank"
             >LinkedIn</a
           >
-          y
+        </p>
+        <p>
+          github:
           <a href="https://github.com/lucaszeller" target="_blank">GitHub</a>
         </p>
       </div>
