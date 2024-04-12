@@ -12,7 +12,7 @@
         margin: 0;
         padding: 0;
         background-color: #f0f0f0;
-        background-image: url("C:/proyectoslucas/perfillucas/fotos/1.jpg");
+        background-image: url("fotos/1.jpg");
         /* Cambia '1.jpg' por el nombre de tu primera imagen de fondo */
         background-size: cover;
         background-position: center;
@@ -22,24 +22,24 @@
 
       @keyframes changeBackground {
         0% {
-          background-image: url("C:/proyectoslucas/perfillucas/fotos/4.jpg");
+          background-image: url("fotos/4.jpg");
           /* Cambiamos el orden de las imágenes para empezar con la última */
         }
 
         25% {
-          background-image: url("C:/proyectoslucas/perfillucas/fotos/11.jpg");
+          background-image: url("fotos/11.jpg");
         }
 
         50% {
-          background-image: url("C:/proyectoslucas/perfillucas/fotos/12.jpg");
+          background-image: url("fotos/12.jpg");
         }
 
         75% {
-          background-image: url("C:/proyectoslucas/perfillucas/fotos/13.jpg");
+          background-image: url("fotos/13.jpg");
         }
 
         100% {
-          background-image: url("C:/proyectoslucas/perfillucas/fotos/14.jpg");
+          background-image: url("fotos/14.jpg");
         }
       }
 
@@ -70,7 +70,7 @@
       h1,
       h2 {
         color: #333;
-        text-align: center; /* Centrar los títulos */
+        text-align: center;
       }
 
       section {
@@ -79,7 +79,7 @@
 
       p {
         color: #666;
-        line-height: 1.6; /* Aumentar el espaciado entre líneas */
+        line-height: 1.6;
       }
 
       ul {
@@ -101,10 +101,9 @@
       footer {
         text-align: center;
         margin-top: 20px;
-        color: #fff; /* Cambiamos el color del texto a blanco */
+        color: #fff;
       }
 
-      /* Estilos de CSS externos */
       @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
       .header-container {
@@ -120,13 +119,13 @@
         text-align: left;
         border: none;
         outline: none;
-        transition: background-color 0.4s; /* Transición de color de fondo */
+        transition: background-color 0.4s;
         border-radius: 8px;
         margin-bottom: 15px;
-        display: flex; /* Alinear el contenido en el centro */
-        justify-content: space-between; /* Alinear el contenido a ambos lados */
-        align-items: center; /* Centrar verticalmente */
-        position: relative; /* Añadir posición relativa */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
       }
 
       .accordion::after {
@@ -140,24 +139,24 @@
         border-left: 6px solid transparent;
         border-right: 6px solid transparent;
         border-top: 6px solid #333;
-        transition: all 0.3s ease; /* Transición para el triángulo */
+        transition: all 0.3s ease;
       }
 
       .accordion.active::after {
-        transform: translateY(-50%) rotate(180deg); /* Rotar el triángulo hacia arriba */
+        transform: translateY(-50%) rotate(180deg);
       }
 
       .panel {
-        padding: 20px 18px; /* Añadir relleno */
+        padding: 20px 18px;
         display: none;
-        background-color: #f9f9f9; /* Color de fondo del panel */
+        background-color: #f9f9f9;
         overflow: hidden;
         border-radius: 8px;
         margin-bottom: 20px;
-        animation: slideDown 0.5s ease; /* Animación de despliegue */
-        transition: margin 0.5s ease; /* Transición de margen */
-        border: 1px solid #ccc; /* Agregar borde */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agregar sombra */
+        animation: slideDown 0.5s ease;
+        transition: margin 0.5s ease;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
 
       .panel p {
@@ -174,11 +173,9 @@
         max-height: 1000px;
         padding-top: 20px;
         padding-bottom: 20px;
-        /* Choose a value greater than the expected maximum height of the panel */
-        margin-top: 20px; /* Ajuste de margen superior */
+        margin-top: 20px;
       }
 
-      /* Estilos para el botón de WhatsApp */
       .whatsapp-button {
         position: fixed;
         bottom: 20px;
@@ -198,15 +195,14 @@
         transform: scale(1.1);
       }
 
-      /* Animación de despliegue */
       @keyframes slideDown {
         from {
           max-height: 0;
-          margin-top: -20px; /* Ajuste de margen superior */
+          margin-top: -20px;
         }
         to {
           max-height: 1000px;
-          margin-top: 20px; /* Ajuste de margen superior */
+          margin-top: 20px;
         }
       }
     </style>
@@ -214,10 +210,7 @@
   <body>
     <div class="container">
       <div class="profile-picture">
-        <img
-          src="C:\proyectoslucas\perfillucas\fotos\perfil.jpeg"
-          alt="Foto de perfil"
-        />
+        <img src="fotos\perfil.jpeg" alt="Foto de perfil" />
       </div>
       <div class="header-container">
         <h1>Mi Perfil</h1>
@@ -243,7 +236,6 @@
           <li>Python</li>
           <li>Java</li>
           <li>C++</li>
-          <!-- Agrega más habilidades aquí -->
         </ul>
       </div>
       <button class="accordion">Educación</button>
@@ -251,13 +243,11 @@
         <p>
           Ingenieria en Sistemas de Informacion - UTN Frsfco - 2021 - actualidad
         </p>
-        <!-- Agrega más información sobre tu educación -->
       </div>
       <button class="accordion">Experiencia Laboral</button>
       <div class="panel">
         <p>Tecnosoft computacion / 2021 - 2022</p>
         <p>Hector Codini SA / 2022 - Actualidad</p>
-        <!-- Agrega más información sobre tu experiencia laboral -->
       </div>
       <button class="accordion">Contacto</button>
       <div class="panel">
@@ -268,10 +258,9 @@
         <p>Al Teléfono: 3406-415139</p>
       </div>
     </div>
-    <!-- Botón de WhatsApp -->
     <div class="whatsapp-button">
       <a href="https://wa.me/5493406415139" target="_blank">
-        <img src="C:\proyectoslucas\perfillucas\fotos\wpp.jpg" alt="WhatsApp" />
+        <img src="fotos\wpp.jpg" alt="WhatsApp" />
       </a>
     </div>
     <footer>
